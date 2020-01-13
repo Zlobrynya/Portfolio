@@ -32,7 +32,7 @@ class SceneObject {
     }
     
     private func addNode(pos: SCNVector3, name: String){
-        guard let scene = SCNScene(named: "art.scnassets/\(name).scn") else { fatalError() }
+        guard let scene = SCNScene(named: name) else { fatalError() }
         node = scene.rootNode
         node.position = pos
         node.categoryBitMask = 0b0010
@@ -56,7 +56,7 @@ class SceneObject {
         node.eulerAngles.y += -Float(rotation)
     }
     
-    func setPosition(_ newPosition: SIMD3<Float>, relativeTo cameraTransform: matrix_float4x4, smoothMovement: Bool = false) {
+    func setPosition(_ newPosition: SIMD3<Float>, relativeTo cameraTransform: matrix_float4x4) {
         let cameraWorldPosition = cameraTransform.translation
         var positionOffsetFromCamera = newPosition - cameraWorldPosition
         
@@ -67,6 +67,11 @@ class SceneObject {
         
         node.simdPosition = cameraWorldPosition + positionOffsetFromCamera
         yBeforAnimation = node.position.y
+    }
+    
+    func setPosition(_ newPosition: SIMD3<Float>, relativeTo cameraTransform: matrix_float4x4, eulerAngles: SCNVector3) {
+        setPosition(newPosition, relativeTo: cameraTransform)
+        node.eulerAngles = eulerAngles
     }
     
     private func animate(targetPos: SCNVector3){
@@ -90,5 +95,18 @@ class SceneObject {
     func animateSelectStop(){
         node.removeAction(forKey: "select")
         node.position.y = yBeforAnimation
+    }
+    
+    func changeTexture(texture: UIImage, nameNode: String, nameMaterial: String){
+        for item in node.childNodes{
+            if item.name?.contains(nameNode) ?? false,
+                let material = item.geometry?.material(named: nameMaterial){
+                    material.diffuse.contents = texture
+                    //let translation = SCNMatrix4MakeTranslation(0, -1, 0)
+                    //let rotation = SCNMatrix4MakeRotation(-Float.pi, 0, 0, 1)
+                    //let transform = SCNMatrix4Mult(translation, rotation)
+                    //material.diffuse.contentsTransform = transform
+            }
+        }
     }
 }
