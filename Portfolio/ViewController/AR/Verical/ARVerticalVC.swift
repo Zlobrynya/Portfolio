@@ -18,10 +18,22 @@ class ARVerticalVC: ParentArVC {
     private var vcPageView: ImagesPageVC?
     private var arrayImage =  ["image1","image2","image3","image4"]
     
+    private var nameNodeMaterial = "Rectangle003"
+    private var nameMaterial = "Poster_001"
+    
     override var isSelectNode: Bool {
         didSet{
-            pageView.isHidden = !isSelectNode
-            buttonOpenClose.isHidden = !isSelectNode
+            if isBottomViewOpen {
+                openCloseBottomPV(){ finish in
+                    if finish{
+                        self.pageView.isHidden = !self.isSelectNode
+                        self.buttonOpenClose.isHidden = !self.isSelectNode
+                    }
+                }
+            }else{
+                self.pageView.isHidden = !self.isSelectNode
+                self.buttonOpenClose.isHidden = !self.isSelectNode
+            }
         }
     }
     
@@ -34,27 +46,25 @@ class ARVerticalVC: ParentArVC {
         setUpSceneView()
         vcPageView?.nameImages = arrayImage
         vcPageView?.customDelegate = self
-        // Do any additional setup after loading the view.
         if let image = UIImage(named: arrayImage[0]){
-            selectNode?.changeTexture(texture: image, nameNode: "Rectangle003", nameMaterial: "Poster_001")
-        }
-    }
-    
-    @IBAction func setImageToPoster(_ sender: Any) {
-        if let selectNode = selectNode,
-            let image = UIImage(named: "image1"){
-            selectNode.changeTexture(texture: image, nameNode: "Rectangle003", nameMaterial: "Poster_001")
+            selectNode?.changeTexture(texture: image, nameNode: nameNodeMaterial, nameMaterial: nameMaterial)
         }
     }
     
     @IBAction func showBottomPageView(_ sender: Any) {
+        openCloseBottomPV(){ _ in }
+    }
+    
+    private func openCloseBottomPV(completionHandler: @escaping (_ finish: Bool) -> Void){
         bottomLayout.constant = isBottomViewOpen ? CGFloat(heightBottomViewLayout.constant - 15) : CGFloat(0)
         let titleButton = isBottomViewOpen ? "Open" : "Close"
         buttonOpenClose.setTitle(titleButton, for: .normal)
         isBottomViewOpen = !isBottomViewOpen
         UIView.animate(withDuration: 0.4, animations: {
             self.view.layoutIfNeeded()
-        })
+        }){ finish in
+            completionHandler(finish)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -78,7 +88,7 @@ extension ARVerticalVC: CustomPageViewControllerDelegate{
     func customPageViewController(customPageViewController: UIPageViewController, didUpdatePageIndex index: Int) {
         if let selectNode = selectNode,
             let image = UIImage(named: arrayImage[index]){
-            selectNode.changeTexture(texture: image, nameNode: "Rectangle003", nameMaterial: "Poster_001")
+            selectNode.changeTexture(texture: image, nameNode: nameNodeMaterial, nameMaterial: nameMaterial)
         }
     }
 }
