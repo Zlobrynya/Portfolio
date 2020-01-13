@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fP0-0X-5Qt">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -21,7 +21,105 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133" y="139"/>
+            <point key="canvasLocation" x="-197" y="139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pUP-D1-aVw">
+            <objects>
+                <viewController id="fP0-0X-5Qt" customClass="ARViewController" customModule="Portfolio" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5gT-9F-9cb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tS7-7P-beb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </arscnView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57x-BU-S5m">
+                                <rect key="frame" x="30" y="74" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="2Ap-YL-wmV"/>
+                                    <constraint firstAttribute="height" constant="35" id="88a-qw-qBF"/>
+                                </constraints>
+                                <state key="normal" image="icClose"/>
+                                <connections>
+                                    <action selector="touchClose:" destination="fP0-0X-5Qt" eventType="touchUpInside" id="xZv-N8-Rj5"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qre-tR-W14">
+                                <rect key="frame" x="349" y="797" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="c11-9D-lRh"/>
+                                    <constraint firstAttribute="height" constant="35" id="ofa-IV-uX9"/>
+                                </constraints>
+                                <state key="normal" image="icTrash"/>
+                                <connections>
+                                    <action selector="touchDeleteNode:" destination="fP0-0X-5Qt" eventType="touchUpInside" id="GE2-Xl-JXS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyY-sd-CAt">
+                                <rect key="frame" x="359" y="74" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="I1D-uZ-tK8"/>
+                                    <constraint firstAttribute="width" constant="25" id="YDm-WV-j4r"/>
+                                </constraints>
+                                <state key="normal" image="icRefresh"/>
+                                <connections>
+                                    <action selector="touchRefresh:" destination="fP0-0X-5Qt" eventType="touchUpInside" id="vn0-CE-Mp6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2m-Ar-gjw">
+                                <rect key="frame" x="189.5" y="797" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="DD6-Sw-86v"/>
+                                    <constraint firstAttribute="width" constant="35" id="mBK-JR-eMA"/>
+                                </constraints>
+                                <state key="normal" image="IcAddNode"/>
+                                <connections>
+                                    <action selector="touchAddNode:" destination="fP0-0X-5Qt" eventType="touchUpInside" id="QwY-lj-VrE"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready to install on a plane" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eom-S1-8Uv">
+                                <rect key="frame" x="107.5" y="76" width="199.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="QuT-cR-y9a" firstAttribute="trailing" secondItem="dyY-sd-CAt" secondAttribute="trailing" constant="30" id="6sj-7o-f7q"/>
+                            <constraint firstItem="tS7-7P-beb" firstAttribute="trailing" secondItem="QuT-cR-y9a" secondAttribute="trailing" id="Awb-fz-lQZ"/>
+                            <constraint firstAttribute="bottom" secondItem="tS7-7P-beb" secondAttribute="bottom" id="Igf-RU-iqd"/>
+                            <constraint firstItem="s2m-Ar-gjw" firstAttribute="centerY" secondItem="qre-tR-W14" secondAttribute="centerY" id="J7J-1d-djB"/>
+                            <constraint firstItem="tS7-7P-beb" firstAttribute="top" secondItem="5gT-9F-9cb" secondAttribute="top" id="M0c-0v-oxR"/>
+                            <constraint firstItem="QuT-cR-y9a" firstAttribute="trailing" secondItem="qre-tR-W14" secondAttribute="trailing" constant="30" id="MAM-3n-N4O"/>
+                            <constraint firstItem="tS7-7P-beb" firstAttribute="leading" secondItem="QuT-cR-y9a" secondAttribute="leading" id="ZU2-dw-2Mj"/>
+                            <constraint firstItem="s2m-Ar-gjw" firstAttribute="centerX" secondItem="tS7-7P-beb" secondAttribute="centerX" id="a6V-BC-Hv7"/>
+                            <constraint firstItem="57x-BU-S5m" firstAttribute="top" secondItem="QuT-cR-y9a" secondAttribute="top" constant="30" id="g4G-EZ-cdG"/>
+                            <constraint firstItem="dyY-sd-CAt" firstAttribute="top" secondItem="QuT-cR-y9a" secondAttribute="top" constant="30" id="js5-1T-Zub"/>
+                            <constraint firstItem="57x-BU-S5m" firstAttribute="leading" secondItem="QuT-cR-y9a" secondAttribute="leading" constant="30" id="lq5-SF-zo7"/>
+                            <constraint firstItem="eom-S1-8Uv" firstAttribute="centerX" secondItem="QuT-cR-y9a" secondAttribute="centerX" id="nPl-bj-XPu"/>
+                            <constraint firstItem="eom-S1-8Uv" firstAttribute="centerY" secondItem="dyY-sd-CAt" secondAttribute="centerY" id="pzK-92-bco"/>
+                            <constraint firstItem="QuT-cR-y9a" firstAttribute="bottom" secondItem="qre-tR-W14" secondAttribute="bottom" constant="30" id="whF-Yk-FNg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QuT-cR-y9a"/>
+                    </view>
+                    <connections>
+                        <outlet property="addNodeButton" destination="s2m-Ar-gjw" id="qZx-hi-iuZ"/>
+                        <outlet property="deleteButton" destination="qre-tR-W14" id="B8z-g7-MN6"/>
+                        <outlet property="labelHelp" destination="eom-S1-8Uv" id="9GN-LB-Lic"/>
+                        <outlet property="sceneView" destination="tS7-7P-beb" id="NZX-2e-Y0X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PA9-94-l66" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="951" y="139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="IcAddNode" width="56" height="56"/>
+        <image name="icClose" width="25" height="25"/>
+        <image name="icRefresh" width="27" height="27"/>
+        <image name="icTrash" width="56" height="56"/>
+    </resources>
 </document>

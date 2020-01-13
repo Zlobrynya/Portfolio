@@ -11,8 +11,13 @@
 		CEB295F723CC404100587924 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB295F623CC404100587924 /* SceneDelegate.swift */; };
 		CEB295F923CC404100587924 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB295F823CC404100587924 /* MainVC.swift */; };
 		CEB295FC23CC404100587924 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB295FA23CC404100587924 /* Main.storyboard */; };
-		CEB295FE23CC404200587924 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB295FD23CC404200587924 /* Assets.xcassets */; };
 		CEB2960123CC404200587924 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB295FF23CC404200587924 /* LaunchScreen.storyboard */; };
+		CEB2961023CC488000587924 /* SceneObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2960E23CC488000587924 /* SceneObject.swift */; };
+		CEB2961423CC498400587924 /* FloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2961223CC498400587924 /* FloatExtensions.swift */; };
+		CEB2961523CC498400587924 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2961323CC498400587924 /* CGPoint.swift */; };
+		CEB2961923CC49E600587924 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2961823CC49E600587924 /* ARViewController.swift */; };
+		CEB2961B23CC502100587924 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB2961A23CC502100587924 /* art.scnassets */; };
+		CEB2961D23CC710A00587924 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB2961C23CC6B7400587924 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,9 +26,14 @@
 		CEB295F623CC404100587924 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CEB295F823CC404100587924 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		CEB295FB23CC404100587924 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CEB295FD23CC404200587924 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEB2960023CC404200587924 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEB2960223CC404200587924 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEB2960E23CC488000587924 /* SceneObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneObject.swift; sourceTree = "<group>"; };
+		CEB2961223CC498400587924 /* FloatExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatExtensions.swift; sourceTree = "<group>"; };
+		CEB2961323CC498400587924 /* CGPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
+		CEB2961823CC49E600587924 /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		CEB2961A23CC502100587924 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		CEB2961C23CC6B7400587924 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +67,8 @@
 			isa = PBXGroup;
 			children = (
 				CEB2960A23CC420700587924 /* ViewController */,
-				CEB2960923CC420100587924 /* CoreData */,
-				CEB2960823CC41FD00587924 /* AR */,
+				CEB2961723CC49B300587924 /* Models */,
+				CEB2961123CC498400587924 /* Extensions */,
 				CEB2960B23CC421700587924 /* Support */,
 				CEB2960223CC404200587924 /* Info.plist */,
 			);
@@ -68,20 +78,15 @@
 		CEB2960823CC41FD00587924 /* AR */ = {
 			isa = PBXGroup;
 			children = (
+				CEB2960D23CC488000587924 /* SceneObject */,
 			);
 			path = AR;
-			sourceTree = "<group>";
-		};
-		CEB2960923CC420100587924 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CoreData;
 			sourceTree = "<group>";
 		};
 		CEB2960A23CC420700587924 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CEB2961623CC498C00587924 /* AR */,
 				CEB295F823CC404100587924 /* MainVC.swift */,
 				CEB295FA23CC404100587924 /* Main.storyboard */,
 			);
@@ -91,12 +96,46 @@
 		CEB2960B23CC421700587924 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				CEB2961C23CC6B7400587924 /* Assets.xcassets */,
+				CEB2961A23CC502100587924 /* art.scnassets */,
 				CEB295F623CC404100587924 /* SceneDelegate.swift */,
 				CEB295F423CC404100587924 /* AppDelegate.swift */,
-				CEB295FD23CC404200587924 /* Assets.xcassets */,
 				CEB295FF23CC404200587924 /* LaunchScreen.storyboard */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		CEB2960D23CC488000587924 /* SceneObject */ = {
+			isa = PBXGroup;
+			children = (
+				CEB2960E23CC488000587924 /* SceneObject.swift */,
+			);
+			path = SceneObject;
+			sourceTree = "<group>";
+		};
+		CEB2961123CC498400587924 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CEB2961223CC498400587924 /* FloatExtensions.swift */,
+				CEB2961323CC498400587924 /* CGPoint.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CEB2961623CC498C00587924 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				CEB2961823CC49E600587924 /* ARViewController.swift */,
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
+		CEB2961723CC49B300587924 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEB2960823CC41FD00587924 /* AR */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,7 +197,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEB2960123CC404200587924 /* LaunchScreen.storyboard in Resources */,
-				CEB295FE23CC404200587924 /* Assets.xcassets in Resources */,
+				CEB2961B23CC502100587924 /* art.scnassets in Resources */,
+				CEB2961D23CC710A00587924 /* Assets.xcassets in Resources */,
 				CEB295FC23CC404100587924 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -170,7 +210,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB2961923CC49E600587924 /* ARViewController.swift in Sources */,
 				CEB295F923CC404100587924 /* MainVC.swift in Sources */,
+				CEB2961023CC488000587924 /* SceneObject.swift in Sources */,
+				CEB2961423CC498400587924 /* FloatExtensions.swift in Sources */,
+				CEB2961523CC498400587924 /* CGPoint.swift in Sources */,
 				CEB295F523CC404100587924 /* AppDelegate.swift in Sources */,
 				CEB295F723CC404100587924 /* SceneDelegate.swift in Sources */,
 			);
@@ -319,7 +363,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H4R9ZY8GGR;
 				INFOPLIST_FILE = Portfolio/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -338,7 +382,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H4R9ZY8GGR;
 				INFOPLIST_FILE = Portfolio/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
