@@ -15,6 +15,12 @@
 		CEB295FE23CC404200587924 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB295FD23CC404200587924 /* Assets.xcassets */; };
 		CEB2960123CC404200587924 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB295FF23CC404200587924 /* LaunchScreen.storyboard */; };
 		CED297F523D5A77600B876FC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CED297F423D5A77600B876FC /* GoogleService-Info.plist */; };
+		CED297F923D5A7F600B876FC /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED297F823D5A7F600B876FC /* Info.storyboard */; };
+		CED297FB23D5A81B00B876FC /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED297FA23D5A81B00B876FC /* InfoViewController.swift */; };
+		CED2980023D5A86100B876FC /* InfoModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED297FF23D5A86100B876FC /* InfoModelView.swift */; };
+		CED2980223D5A86A00B876FC /* InfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED2980123D5A86A00B876FC /* InfoModel.swift */; };
+		CED2980423D5A9CF00B876FC /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED2980323D5A9CF00B876FC /* Firebase.swift */; };
+		CED2980723D5AC5A00B876FC /* Constants+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED2980623D5AC5A00B876FC /* Constants+Firebase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +36,12 @@
 		CEB2960023CC404200587924 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEB2960223CC404200587924 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CED297F423D5A77600B876FC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CED297F823D5A7F600B876FC /* Info.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
+		CED297FA23D5A81B00B876FC /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		CED297FF23D5A86100B876FC /* InfoModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoModelView.swift; sourceTree = "<group>"; };
+		CED2980123D5A86A00B876FC /* InfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoModel.swift; sourceTree = "<group>"; };
+		CED2980323D5A9CF00B876FC /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
+		CED2980623D5AC5A00B876FC /* Constants+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Firebase.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +94,7 @@
 		CEB295F323CC404100587924 /* Portfolio */ = {
 			isa = PBXGroup;
 			children = (
+				CED297FC23D5A82500B876FC /* Model */,
 				CEB2960A23CC420700587924 /* ViewController */,
 				CEB2960923CC420100587924 /* CoreData */,
 				CEB2960823CC41FD00587924 /* AR */,
@@ -108,6 +121,7 @@
 		CEB2960A23CC420700587924 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CED297F723D5A7E300B876FC /* Info */,
 				CEB295F823CC404100587924 /* MainVC.swift */,
 				CEB295FA23CC404100587924 /* Main.storyboard */,
 			);
@@ -117,6 +131,7 @@
 		CEB2960B23CC421700587924 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				CED2980523D5AC4B00B876FC /* Constants */,
 				CED297F423D5A77600B876FC /* GoogleService-Info.plist */,
 				CEB295F623CC404100587924 /* SceneDelegate.swift */,
 				CEB295F423CC404100587924 /* AppDelegate.swift */,
@@ -124,6 +139,49 @@
 				CEB295FF23CC404200587924 /* LaunchScreen.storyboard */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		CED297F723D5A7E300B876FC /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				CED297F823D5A7F600B876FC /* Info.storyboard */,
+				CED297FA23D5A81B00B876FC /* InfoViewController.swift */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		CED297FC23D5A82500B876FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CED297FE23D5A83400B876FC /* General */,
+				CED297FD23D5A82B00B876FC /* Info */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CED297FD23D5A82B00B876FC /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				CED297FF23D5A86100B876FC /* InfoModelView.swift */,
+				CED2980123D5A86A00B876FC /* InfoModel.swift */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		CED297FE23D5A83400B876FC /* General */ = {
+			isa = PBXGroup;
+			children = (
+				CED2980323D5A9CF00B876FC /* Firebase.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		CED2980523D5AC4B00B876FC /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				CED2980623D5AC5A00B876FC /* Constants+Firebase.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +247,7 @@
 				CEB2960123CC404200587924 /* LaunchScreen.storyboard in Resources */,
 				CEB295FE23CC404200587924 /* Assets.xcassets in Resources */,
 				CEB295FC23CC404100587924 /* Main.storyboard in Resources */,
+				CED297F923D5A7F600B876FC /* Info.storyboard in Resources */,
 				CED297F523D5A77600B876FC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,9 +301,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED2980423D5A9CF00B876FC /* Firebase.swift in Sources */,
 				CEB295F923CC404100587924 /* MainVC.swift in Sources */,
 				CEB295F523CC404100587924 /* AppDelegate.swift in Sources */,
+				CED2980023D5A86100B876FC /* InfoModelView.swift in Sources */,
+				CED297FB23D5A81B00B876FC /* InfoViewController.swift in Sources */,
 				CEB295F723CC404100587924 /* SceneDelegate.swift in Sources */,
+				CED2980223D5A86A00B876FC /* InfoModel.swift in Sources */,
+				CED2980723D5AC5A00B876FC /* Constants+Firebase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,7 +464,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zlobrynya.portfolio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -420,7 +484,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zlobrynya.portfolio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
