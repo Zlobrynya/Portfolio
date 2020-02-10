@@ -18,7 +18,24 @@ class Firebase{
             Firebase.firestoreBD.collection(Constants.firebaseFirestore.nameCollection)
                 .document(Constants.firebaseFirestore.generalInfo.nameDB)
                 .getDocument(){ snapshot, error  in
-                    let model = GeneralModel()
+                    var model = GeneralModel()
+                    if let data = snapshot?.data(){
+                        model.setData(data: data)
+                    }
+                    observer.onNext(model)
+                    observer.onCompleted()
+            }
+            
+            return Disposables.create()
+        }
+    }
+    
+    class func getSkillsInfo() -> Observable<SkillsModel> {
+        return Observable.create{ observer in
+            Firebase.firestoreBD.collection(Constants.firebaseFirestore.nameCollection)
+                .document(Constants.firebaseFirestore.skillsInfo.nameDB)
+                .getDocument(){ snapshot, error  in
+                    var model = SkillsModel()
                     if let data = snapshot?.data(){
                         model.setData(data: data)
                     }

@@ -21,7 +21,7 @@ class Constants {
             let nameDB = "general_info"
             let nameFFIO = "FIO"
             let nameFURLGitHub = "github"
-            let nameFBirthday = "birthday"
+            let nameFhhURL = "hh_url"
             let nameFEmail = "email"
             let nameFLanguage_eng = "language_eng"
             let nameFNumberPhone = "number_phone"
@@ -29,10 +29,15 @@ class Constants {
         
         struct Skills {
             let nameDB = "skills"
-            let nameFGeneral = "general"
-            let nameFAuthentication = "authentication"
-            let nameFLanguages = "languages"
+            let nameFSever = "server"
+            let nameFAuthentication = "auto_reg"
+            let nameFCode = "code"
+            let nameFDesign = "design"
+            let nameFLanguage = "languages"
             let nameFLibrary = "library"
+            let nameFOwn = "own"
+            let nameFPattern = "pattern"
+            let nameFWork = "work"
         }
     }
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5228E71F23F003310067575C /* SkillsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228E71E23F003310067575C /* SkillsModel.swift */; };
+		52795EF023F1C963006D0ED8 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795EEF23F1C963006D0ED8 /* InfoViewController.swift */; };
 		6A2ADADD6089AA93F35119FF /* Pods_Portfolio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A52073F21EAD65D33911F2 /* Pods_Portfolio.framework */; };
 		CEB295F523CC404100587924 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB295F423CC404100587924 /* AppDelegate.swift */; };
 		CEB295F723CC404100587924 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB295F623CC404100587924 /* SceneDelegate.swift */; };
@@ -16,9 +18,9 @@
 		CEB2960123CC404200587924 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB295FF23CC404200587924 /* LaunchScreen.storyboard */; };
 		CED297F523D5A77600B876FC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CED297F423D5A77600B876FC /* GoogleService-Info.plist */; };
 		CED297F923D5A7F600B876FC /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED297F823D5A7F600B876FC /* Info.storyboard */; };
-		CED297FB23D5A81B00B876FC /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED297FA23D5A81B00B876FC /* InfoViewController.swift */; };
+		CED297FB23D5A81B00B876FC /* MainInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED297FA23D5A81B00B876FC /* MainInfoViewController.swift */; };
 		CED2980023D5A86100B876FC /* InfoModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED297FF23D5A86100B876FC /* InfoModelView.swift */; };
-		CED2980223D5A86A00B876FC /* InfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED2980123D5A86A00B876FC /* InfoModel.swift */; };
+		CED2980223D5A86A00B876FC /* GeneralModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED2980123D5A86A00B876FC /* GeneralModel.swift */; };
 		CED2980423D5A9CF00B876FC /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED2980323D5A9CF00B876FC /* Firebase.swift */; };
 		CED2980723D5AC5A00B876FC /* Constants+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED2980623D5AC5A00B876FC /* Constants+Firebase.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +28,8 @@
 /* Begin PBXFileReference section */
 		4911E87B5D640D8732C992DD /* Pods-Portfolio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Portfolio.debug.xcconfig"; path = "Target Support Files/Pods-Portfolio/Pods-Portfolio.debug.xcconfig"; sourceTree = "<group>"; };
 		5151A3B43DE8F21AB5B5702F /* Pods-Portfolio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Portfolio.release.xcconfig"; path = "Target Support Files/Pods-Portfolio/Pods-Portfolio.release.xcconfig"; sourceTree = "<group>"; };
+		5228E71E23F003310067575C /* SkillsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsModel.swift; sourceTree = "<group>"; };
+		52795EEF23F1C963006D0ED8 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		54A52073F21EAD65D33911F2 /* Pods_Portfolio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Portfolio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB295F123CC404100587924 /* Portfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Portfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB295F423CC404100587924 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,9 +41,9 @@
 		CEB2960223CC404200587924 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CED297F423D5A77600B876FC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CED297F823D5A7F600B876FC /* Info.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
-		CED297FA23D5A81B00B876FC /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		CED297FA23D5A81B00B876FC /* MainInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInfoViewController.swift; sourceTree = "<group>"; };
 		CED297FF23D5A86100B876FC /* InfoModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoModelView.swift; sourceTree = "<group>"; };
-		CED2980123D5A86A00B876FC /* InfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoModel.swift; sourceTree = "<group>"; };
+		CED2980123D5A86A00B876FC /* GeneralModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralModel.swift; sourceTree = "<group>"; };
 		CED2980323D5A9CF00B876FC /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		CED2980623D5AC5A00B876FC /* Constants+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Firebase.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -56,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5228E71D23F002A50067575C /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+				CED297FF23D5A86100B876FC /* InfoModelView.swift */,
+			);
+			path = ModelView;
+			sourceTree = "<group>";
+		};
 		871D0C93B8B75BED03A1A74E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +106,7 @@
 		CEB295F323CC404100587924 /* Portfolio */ = {
 			isa = PBXGroup;
 			children = (
+				5228E71D23F002A50067575C /* ModelView */,
 				CED297FC23D5A82500B876FC /* Model */,
 				CEB2960A23CC420700587924 /* ViewController */,
 				CEB2960923CC420100587924 /* CoreData */,
@@ -145,7 +158,8 @@
 			isa = PBXGroup;
 			children = (
 				CED297F823D5A7F600B876FC /* Info.storyboard */,
-				CED297FA23D5A81B00B876FC /* InfoViewController.swift */,
+				CED297FA23D5A81B00B876FC /* MainInfoViewController.swift */,
+				52795EEF23F1C963006D0ED8 /* InfoViewController.swift */,
 			);
 			path = Info;
 			sourceTree = "<group>";
@@ -153,7 +167,7 @@
 		CED297FC23D5A82500B876FC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CED297FE23D5A83400B876FC /* General */,
+				CED297FE23D5A83400B876FC /* Firebase */,
 				CED297FD23D5A82B00B876FC /* Info */,
 			);
 			path = Model;
@@ -162,18 +176,18 @@
 		CED297FD23D5A82B00B876FC /* Info */ = {
 			isa = PBXGroup;
 			children = (
-				CED297FF23D5A86100B876FC /* InfoModelView.swift */,
-				CED2980123D5A86A00B876FC /* InfoModel.swift */,
+				CED2980123D5A86A00B876FC /* GeneralModel.swift */,
+				5228E71E23F003310067575C /* SkillsModel.swift */,
 			);
 			path = Info;
 			sourceTree = "<group>";
 		};
-		CED297FE23D5A83400B876FC /* General */ = {
+		CED297FE23D5A83400B876FC /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
 				CED2980323D5A9CF00B876FC /* Firebase.swift */,
 			);
-			path = General;
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 		CED2980523D5AC4B00B876FC /* Constants */ = {
@@ -305,9 +319,11 @@
 				CEB295F923CC404100587924 /* MainVC.swift in Sources */,
 				CEB295F523CC404100587924 /* AppDelegate.swift in Sources */,
 				CED2980023D5A86100B876FC /* InfoModelView.swift in Sources */,
-				CED297FB23D5A81B00B876FC /* InfoViewController.swift in Sources */,
+				52795EF023F1C963006D0ED8 /* InfoViewController.swift in Sources */,
+				CED297FB23D5A81B00B876FC /* MainInfoViewController.swift in Sources */,
 				CEB295F723CC404100587924 /* SceneDelegate.swift in Sources */,
-				CED2980223D5A86A00B876FC /* InfoModel.swift in Sources */,
+				CED2980223D5A86A00B876FC /* GeneralModel.swift in Sources */,
+				5228E71F23F003310067575C /* SkillsModel.swift in Sources */,
 				CED2980723D5AC5A00B876FC /* Constants+Firebase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
