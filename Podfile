@@ -12,4 +12,5 @@ target 'Portfolio' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Firestore'
   pod 'Firebase/Core'
+
 end
